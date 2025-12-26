@@ -1,0 +1,8 @@
+
+{
+  "name": "Aivora Digitals",
+  "description": "A high-end, interactive digital agency website for Aivora Digitals, featuring scroll-triggered animations, AI-powered strategy demos, and a comprehensive service showcase.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
