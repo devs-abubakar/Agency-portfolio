@@ -108,7 +108,7 @@ export default function Loader({ onAnimationComplete, contentLoaded }) {
         ref={textRef}
         className="relative z-10 perspective-[1000px] select-none"
       >
-        <h1 className="flex text-4xl md:text-7xl lg:text-8xl font-medium tracking-tight text-white">
+        <h1 className="flex text-4xl font-extrabold md:text-7xl lg:text-8xl tracking-tight text-white">
           {text.split("").map((char, i) => (
             <span
               key={i}
