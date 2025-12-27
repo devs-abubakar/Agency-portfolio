@@ -15,10 +15,11 @@ export const metadata = {
   title: "Aivora Digitals",
   description: "Award-winning digital agency providing web, UX, and AI solutions.",
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    icon: "/public/favicon.png",
+    shortcut: "/public/favicon.png",
+    apple: "/public/favicon.png",
   },
+
   openGraph: {
     title: "Aivora Digitals",
     description: "Award-winning digital agency",
