@@ -78,7 +78,7 @@ const Hero = () => {
           className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-semibold mb-8"
         >
           <Sparkles className="w-4 h-4" />
-          <span>Award Winning Digital Agency</span>
+          <span>Next-Gen AI Solutions</span>
         </div>
 
         {/* Title */}
@@ -86,9 +86,9 @@ const Hero = () => {
           ref={titleRef}
           className="text-5xl md:text-8xl font-black mb-8 leading-tight tracking-tighter"
         >
-          <span className="block text-white">ELEVATE YOUR</span>
+          <span className="block text-white">AI Powered</span>
           <span className="block bg-linear-to-r from-blue-400 via-blue-600 to-indigo-400 bg-clip-text text-transparent">
-            DIGITAL DOMINANCE
+            Business Growth
           </span>
         </h1>
 
@@ -97,7 +97,12 @@ const Hero = () => {
           ref={descRef}
           className="max-w-2xl mx-auto text-slate-400 text-lg md:text-xl mb-12 leading-relaxed"
         >
-          If you don't use AI then your competitors will. Partner with Aivora Digitals to harness the power of AI-driven solutions that propel your business into the future.
+          <span className='font-bold'>
+          AI is your edge.
+          </span>
+           Your competitors are already using it — will you?
+At Aivora Digitals, we help businesses unlock their full potential using AI-powered systems that generate leads and drive growth.
+          
         </p>
 
         {/* Buttons */}

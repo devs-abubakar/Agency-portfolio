@@ -71,7 +71,7 @@ const CustomCursor = () => {
     <>
       <div
         ref={ringRef}
-        className={`fixed top-0 left-0 w-8 h-8 -ml-4 -mt-4 rounded-full border border-blue-500 pointer-events-none z-[9999] transition-all duration-300 ease-out flex items-center justify-center ${
+        className={`fixed mix-blend-difference top-0 left-0 w-8 h-8 -ml-4 -mt-4 rounded-full border-2 border-blue-500 pointer-events-none z-[9999] transition-all duration-300 ease-out flex items-center justify-center ${
           isVisible ? 'opacity-100' : 'opacity-0'
         } ${isHovering ? 'w-12 h-12 -ml-6 -mt-6 bg-blue-500/10 border-blue-400' : ''}`}
       />

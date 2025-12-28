@@ -1,17 +1,23 @@
 
 import React, { useEffect, useRef } from 'react';
-import { Code, Megaphone, Bot, Palette, Layout, Video, ShoppingBag, Terminal } from 'lucide-react';
+import { Code, Megaphone,Brain, Bot, Palette,CodeXmlIcon, ShoppingBag, Terminal, GpuIcon } from 'lucide-react';
 
 const services = [
   {
-    icon: <Code className="w-8 h-8" />,
-    title: "Web Development",
-    desc: "Custom-built, high-performance web applications using React, Next.js, and modern tech stacks.",
+    icon: <CodeXmlIcon className="w-8 h-8" />,
+    title: "AI integrated Websites",
+    desc: "Custom-built, high-performance AI-powered web applications using React and Next.js.",
     gradient: "from-blue-600 to-cyan-500"
   },
   {
+    icon: <Palette className="w-8 h-8" />,
+    title: "UI/UX Designs",
+    desc: "Breathtaking visual identities and branding that make your business unforgettable.",
+    gradient: "from-cyan-500 to-blue-600"
+  },
+  {
     icon: <Megaphone className="w-8 h-8" />,
-    title: "Ads & Marketing",
+    title: "AI-powered ads",
     desc: "Data-driven advertising campaigns that maximize conversion and lower your acquisition cost.",
     gradient: "from-blue-700 to-indigo-600"
   },
@@ -22,26 +28,20 @@ const services = [
     gradient: "from-indigo-600 to-purple-600"
   },
   {
-    icon: <Palette className="w-8 h-8" />,
-    title: "Graphic Designing",
-    desc: "Breathtaking visual identities and branding that make your business unforgettable.",
-    gradient: "from-cyan-500 to-blue-600"
-  },
-  {
-    icon: <Layout className="w-8 h-8" />,
-    title: "WordPress Sites",
-    desc: "Premium, scalable WordPress solutions tailored for ease of use and SEO performance.",
+    icon: <GpuIcon className="w-8 h-8" />,
+    title: "AI Content Creation",
+    desc: "AI-powered content creation designed to create high-quality, consistent content that attracts, engages, and converts your audience.",
     gradient: "from-blue-600 to-blue-900"
   },
   {
-    icon: <Video className="w-8 h-8" />,
-    title: "Video Editing",
-    desc: "Cinematic post-production for social media, ads, and corporate presentations.",
+    icon: <Brain className="w-8 h-8" />,
+    title: "AI Automations",
+    desc: "Intelligent automation workflows designed to manage leads, follow-ups, and internal processes with maximum efficiency.",
     gradient: "from-blue-500 to-indigo-400"
   },
   {
     icon: <ShoppingBag className="w-8 h-8" />,
-    title: "Storify Shops",
+    title: "Shopify Stores",
     desc: "Complete e-commerce setups designed for maximum conversion and seamless checkout.",
     gradient: "from-indigo-700 to-blue-500"
   },
@@ -82,8 +82,10 @@ const Services = () => {
       <div className="text-center mb-24">
         <h2 className="text-blue-500 font-bold uppercase tracking-widest text-sm mb-4">Our Services</h2>
         <h3 className="text-5xl md:text-7xl font-black mb-8 tracking-tight">
-          Everything You Need to <br />
-          <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">Scale Digitally</span>
+          <span className='text-gray-400'>
+            Turning AI into  <br />
+            </span>
+          <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">Real Business Growth</span>
         </h3>
         <p className="max-w-2xl mx-auto text-slate-400 text-lg">
           We combine technical excellence with strategic marketing to deliver results that transform businesses.
