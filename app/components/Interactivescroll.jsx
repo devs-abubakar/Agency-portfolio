@@ -151,13 +151,11 @@ export const InteractiveScrollSection = () => {
         {/* Left: Scrollable Cards */}
         <div className="w-full lg:w-1/2 py-16 lg:py-32">
           <div className="mb-12 lg:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-4 lg:mb-6">
-              The Engine of<br />
-              <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">Digital Evolution</span>
+            <h2 className="text-3xl text-gray-500 sm:text-4xl md:text-5xl font-heading font-bold mb-4 lg:mb-6">
+              Smarter System, <br />Faster Growth <br />
+              <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">Powered by AI</span>
             </h2>
-            <p className="text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed">
-              Explore our core capabilities through this interactive sequence. 
-              Scroll through the cards and the 3D model on the right adapts in real-time.
+            <p className="text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed">From automation to optimization, we use AI to turn your business processes into growth engines.
             </p>
           </div>
 

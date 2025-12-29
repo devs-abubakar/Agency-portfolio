@@ -70,6 +70,7 @@ const Hero = () => {
   <AiOrb />
 </div>
 
+
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-center pointer-events-none">
         {/* Badge */}
@@ -123,19 +124,19 @@ At Aivora Digitals, we help businesses unlock their full potential using AI-powe
         {/* Badges */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 opacity-60">
           <div className="flex items-center space-x-2 justify-center">
-            <TrendingUp className="text-blue-400" />
+            <TrendingUp className="text-blue-700" />
             <span className="font-semibold text-sm">300% Avg ROI</span>
           </div>
           <div className="flex items-center space-x-2 justify-center">
-            <MousePointer2 className="text-blue-400" />
+            <MousePointer2 className="text-blue-700" />
             <span className="font-semibold text-sm">Expert UX/UI</span>
           </div>
           <div className="flex items-center space-x-2 justify-center">
-            <Zap className="text-blue-400" />
+            <Zap className="text-blue-700" />
             <span className="font-semibold text-sm">Lightning Fast Code</span>
           </div>
           <div className="flex items-center space-x-2 justify-center">
-            <Sparkles className="text-blue-400" />
+            <Sparkles className="text-blue-700" />
             <span className="font-semibold text-sm">AI Integrated</span>
           </div>
         </div>

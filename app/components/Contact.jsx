@@ -18,8 +18,8 @@ const Contact = () => {
   const copyTimeoutRef = useRef(null);
 
   // Encoded contact information
-  const encodedEmail = 'aGVsbG9AYWl2b3JhLmRpZ2l0YWw='; // Base64 encoded
-  const encodedPhone = '+MSAoNTU1KSAwMDAtQUlWT1JB'; // Base64 encoded
+  const encodedEmail = 'aivoradigitals@gmail.com'; // Base64 encoded
+  const encodedPhone = '0349 9023706'; // Base64 encoded
 
   // Decode function
   const decodeBase64 = (str) => {
@@ -178,7 +178,7 @@ const Contact = () => {
                   {emailRevealed && (
                     <div className="mt-2 pl-4 sm:pl-14">
                       <a
-                        href={`mailto:${decodeBase64(encodedEmail)}?subject=Contact from Aivora Website&body=Hello Aivora Team,`}
+                        href={`mailto:aivoradigitals@gmail.com?subject=Contact from Aivora Website&body=Hello Aivora Team,`}
                         className="w-full sm:inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white text-blue-700 rounded-lg hover:bg-blue-50 transition-colors text-sm font-medium justify-center"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -245,7 +245,7 @@ const Contact = () => {
                   {phoneRevealed && (
                     <div className="mt-2 pl-4 sm:pl-14">
                       <a
-                        href={`https://wa.me/${decodeBase64(encodedPhone).replace(/\D/g, '')}?text=Hello%20Aivora%20Team,%20I%20came%20from%20your%20website`}
+                        href="https://wa.me/+923499023706?text=Hello%20I%20want%20to%20know%20about%20your%20service" 
                         className="w-full sm:inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors text-sm font-medium justify-center"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -261,7 +261,7 @@ const Contact = () => {
                 </div>
 
                 {/* Address */}
-                <div className="flex items-start sm:items-center gap-4 sm:gap-6 p-4 sm:p-5 bg-white/5 backdrop-blur-sm rounded-2xl sm:rounded-3xl border border-white/10">
+                {/* <div className="flex items-start sm:items-center gap-4 sm:gap-6 p-4 sm:p-5 bg-white/5 backdrop-blur-sm rounded-2xl sm:rounded-3xl border border-white/10">
                   <div className="p-3 sm:p-4 bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl">
                     <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-blue-300" />
                   </div>
@@ -274,7 +274,7 @@ const Contact = () => {
                       Visit by appointment only
                     </p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
 

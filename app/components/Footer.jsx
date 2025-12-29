@@ -1,5 +1,5 @@
 import React from "react";
-import { Github, Twitter, Instagram, Linkedin, ArrowUp } from "lucide-react";
+import { Github, Twitter, Instagram, Linkedin, ArrowUp, Facebook, Box } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -21,17 +21,17 @@ const Footer = () => {
               We empower ambitious brands with cutting-edge digital products and performance marketing strategies.
             </p>
             <div className="flex space-x-3 mt-2">
-              <a href="#" className="p-3 bg-slate-800 rounded-xl hover:bg-blue-600 transition-colors">
-                <Twitter className="w-5 h-5 text-white" />
+              <a href="mailto:aivoradigitals@gmail.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-800 rounded-xl hover:bg-blue-600 transition-colors">
+                <Box className="w-5 h-5 text-white" />
               </a>
-              <a href="#" className="p-3 bg-slate-800 rounded-xl hover:bg-blue-600 transition-colors">
+              <a href="https://www.linkedin.com/company/aivora-digitals/" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-800 rounded-xl hover:bg-blue-600 transition-colors">
                 <Linkedin className="w-5 h-5 text-white" />
               </a>
-              <a href="#" className="p-3 bg-slate-800 rounded-xl hover:bg-blue-600 transition-colors">
+              <a href="https://www.instagram.com/aivoradigitals?igsh=aWU4aDNwdXFnMGY=" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-800 rounded-xl hover:bg-blue-600 transition-colors">
                 <Instagram className="w-5 h-5 text-white" />
               </a>
-              <a href="#" className="p-3 bg-slate-800 rounded-xl hover:bg-blue-600 transition-colors">
-                <Github className="w-5 h-5 text-white" />
+              <a href="https://www.facebook.com/share/1AZYxiyjL8/" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-800 rounded-xl hover:bg-blue-600 transition-colors">
+                <Facebook className="w-5 h-5 text-white" />
               </a>
             </div>
           </div>
@@ -113,14 +113,12 @@ const Footer = () => {
               Stay updated with digital trends and case studies.
             </p>
             <div className="relative w-full">
-              <input
-                type="email"
-                placeholder="Email Address"
+              <a
+                href="mailto:aivoradigitals@gmail.com"
+                target="_blank"
                 className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 pr-12 focus:border-blue-500 outline-none transition-all"
-              />
-              <button className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-blue-600 rounded-lg hover:bg-blue-500 transition-colors">
-                <ArrowUp className="w-4 h-4 rotate-45 text-white" />
-              </button>
+              >AIVORA DIGITALS Gmail</a>
+
             </div>
           </div>
         </div>

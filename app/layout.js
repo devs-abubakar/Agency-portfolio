@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Aivora Digitals",
-  description: "Award-winning digital agency providing web, UX, and AI solutions.",
+  description: "Agency that helps businesses grow with AI-powered solutions.",
   icons: {
     icon: "/favicon.png",
     shortcut: "/favicon.png",
@@ -22,15 +22,15 @@ export const metadata = {
 
   openGraph: {
     title: "Aivora Digitals",
-    description: "Award-winning digital agency",
+    description: "Agency that helps businesses grow with AI-powered solutions.",
     url: "https://aivora-digitals.netlify.app",
     siteName: "Aivora Digitals",
     images: [
       {
-        url: "/images/logo.png",
+        url: "/images/ai banner.png",
         width: 1200,
         height: 630,
-        alt: "Aivora Digitals Logo",
+        alt: "Aivora Digitals",
       },
     ],
     locale: "en_US",

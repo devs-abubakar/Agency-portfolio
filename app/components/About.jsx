@@ -10,11 +10,11 @@ const team = [
     name: "Abdul Rehman",
     role: "Founder & Creative Director",
     image: "/images/AbdulRehman.jpeg",
-    bio: "Visionary leader with 10+ years in digital transformation.",
+    bio: "Experienced in building custom AI-based strategies for modern businesses.",
     socials: {
-      linkedin: "https://linkedin.com/in/abdulrehman",
-      facebook: "https://facebook.com/abdulrehman",
-      instagram: "https://instagram.com/abdulrehman"
+      linkedin: "#",
+      facebook: "#",
+      instagram: "#"
     }
   },
   {
@@ -23,9 +23,9 @@ const team = [
     image: "/images/Muhammad.jpeg",
     bio: "Creative mind behind our successful brand identities.",
     socials: {
-      linkedin: "https://linkedin.com/in/muhammad",
-      facebook: "https://facebook.com/muhammad",
-      instagram: "https://instagram.com/muhammad"
+      linkedin: "#",
+      facebook: "#",
+      instagram: "#"
     }
   },
   {
@@ -34,9 +34,9 @@ const team = [
     image: "/images/Ammar.jpeg",
     bio: "Marketing strategist with a proven track record of driving revenue growth.",
     socials: {
-      linkedin: "https://www.facebook.com/share/17d5fX9beY/",
-      facebook: "https://www.linkedin.com/in/ammar-siddiqui-340944260?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      instagram: "https://instagram.com/ammar"
+      linkedin: "#",
+      facebook: "#",
+      instagram: "#"
     }
   },
   {
@@ -45,9 +45,9 @@ const team = [
     image: "https://picsum.photos/400/500?random=24",
     bio: "Architecture expert specializing in high-load React apps.",
     socials: {
-      linkedin: "https://linkedin.com/in/abubakar",
-      facebook: "https://facebook.com/abubakar",
-      instagram: "https://instagram.com/abubakar"
+      linkedin: "#",
+      facebook: "#",
+      instagram: "#"
     }
   }
 ];

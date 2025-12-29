@@ -8,32 +8,32 @@ const projects = [
   {
     title: "Nova Horizon",
     category: "Web",
-    image: "https://picsum.photos/800/600?random=31"
+    image: "/images/coomingsoon.jpg"
   },
   {
     title: "EcoSphere Ads",
     category: "Marketing",
-    image: "https://picsum.photos/800/600?random=32"
+    image: "/images/coomingsoon.jpg"
   },
   {
     title: "Luxe Storify",
     category: "E-commerce",
-    image: "https://picsum.photos/800/600?random=33"
+    image: "/images/coomingsoon.jpg"
   },
   {
     title: "Quantum Portal",
     category: "Web",
-    image: "https://picsum.photos/800/600?random=34"
+    image: "/images/coomingsoon.jpg"
   },
   {
     title: "Vibe Marketing",
     category: "Marketing",
-    image: "https://picsum.photos/800/600?random=35"
+    image: "/images/coomingsoon.jpg"
   },
   {
     title: "Artisanal Hub",
     category: "E-commerce",
-    image: "https://picsum.photos/800/600?random=36"
+    image: "/images/coomingsoon.jpg"
   }
 ];
 
@@ -49,7 +49,7 @@ const Projects= () => {
       <div className="flex flex-col md:flex-row items-center justify-between mb-16 gap-6">
         <div>
           <h2 className="text-blue-500 font-bold uppercase tracking-widest text-sm mb-4 text-center md:text-left">Selected Projects</h2>
-          <h3 className="text-4xl md:text-5xl font-black text-center md:text-left">Crafting <span className="text-blue-400">Digital Landmarks</span></h3>
+          <h3 className="text-4xl text-gray-400 md:text-5xl font-black text-center md:text-left">Crafting <span className="text-blue-400">Digital Landmarks</span></h3>
         </div>
         
         <div className="flex items-center p-1 bg-slate-900 rounded-2xl border border-slate-800">
