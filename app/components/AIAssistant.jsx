@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { GoogleGenAI } from '@google/genai';
+
 import { Bot, X, Send, Sparkles, Loader2 } from 'lucide-react';
 
 const AIAssistant = () => {
@@ -9,33 +9,29 @@ const AIAssistant = () => {
   const [response, setResponse] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  const generateStrategy = async () => {
-    if (!prompt.trim()) return;
-    
-    setIsLoading(true);
-    setResponse(null);
+const generateStrategy = async () => {
+  if (!prompt.trim()) return;
 
-    try {
-      // Use direct process.env.API_KEY as per initialization guidelines
-      const ai = new GoogleGenAI({ apiKey: process.env.NEXT_PUBLIC_API_KEY });
-      const result = await ai.models.generateContent({
-        model: 'gemini-3-flash-preview',
-        contents: `Act as a senior consultant at Aivora Digitals. Based on this business description: "${prompt}", provide 3 brief, high-impact digital growth strategies involving web dev, ads, or chatbots. Keep it professional, blue-themed (metaphorically), and encouraging. Use bullet points.`,
-        config: {
-            temperature: 0.7,
-            // Removed maxOutputTokens to ensure thinking tokens do not consume the entire output budget
-        }
-      });
-      
-      // Accessing text as a property as per GenerateContentResponse guidelines
-      setResponse(result.text || "I couldn't generate a strategy at the moment. Please try again.");
-    } catch (error) {
-      console.error("AI Error:", error);
-      setResponse("We're currently scaling our AI minds. Please try again in a moment!");
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  setIsLoading(true);
+  setResponse(null);
+
+  try {
+    const res = await fetch("/.netlify/functions/generate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ prompt }),
+    });
+
+    const data = await res.json();
+    setResponse(data.text || "No response from AI");
+  } catch (err) {
+    console.error(err);
+    setResponse("Server error. Try again.");
+  } finally {
+    setIsLoading(false);
+  }
+};
+
 
   return (
     <div className="fixed bottom-8 right-8 z-60">
