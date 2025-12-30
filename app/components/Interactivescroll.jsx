@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { motion, useScroll, useTransform, useSpring, useInView } from 'framer-motion';
+import { motion, useScroll,useInView } from 'framer-motion';
 import { 
   Zap, 
   Bot,
@@ -7,7 +7,6 @@ import {
   TrendingUp,
   BarChart3,
   Handshake,
-  Maximize,
   Sparkles
 } from 'lucide-react';
 import { Interactive3DSection } from './MovingModel';
