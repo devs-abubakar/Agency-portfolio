@@ -122,7 +122,7 @@ At Aivora Digitals, we help businesses unlock their full potential using AI-powe
         </div>
 
         {/* Badges */}
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 opacity-60">
+        <div className="mt-20 grid grid-cols-2 text-gray-400 md:grid-cols-4 gap-4 md:gap-8 opacity-60">
           <div className="flex items-center space-x-2 justify-center">
             <TrendingUp className="text-blue-700" />
             <span className="font-semibold text-sm">300% Avg ROI</span>
