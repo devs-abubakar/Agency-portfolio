@@ -10,7 +10,6 @@ import {
   Maximize,
   Sparkles
 } from 'lucide-react';
-import { getDeepDiveInsight } from '../services/geminiService';
 import { Interactive3DSection } from './MovingModel';
 
 const CARDS = [
@@ -71,18 +70,33 @@ const InfoCard = ({ card }) => {
   const [insight, setInsight] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const handleAskAI = async () => {
-    if (loading) return;
-    setLoading(true);
-    try {
-      const result = await getDeepDiveInsight(card.title, card.description);
-      setInsight(result);
-    } catch (err) {
-      console.error(err);
-    } finally {
-      setLoading(false);
+const handleAskAI = async () => {
+  if (loading) return;
+  setLoading(true);
+
+  try {
+    const res = await fetch("/api/deep-dive", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        topic: card.title,
+        description: card.description,
+      }),
+    });
+
+    if (!res.ok) {
+      throw new Error("API failed");
     }
-  };
+
+    const data = await res.json();
+    setInsight(data);
+  } catch (err) {
+    console.error(err);
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   return (
     <motion.div

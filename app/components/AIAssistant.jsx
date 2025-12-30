@@ -17,10 +17,11 @@ const generateStrategy = async () => {
 
   try {
     const res = await fetch("/api/Ai", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ prompt }),
-    });
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ prompt }),
+});
+
 
     const data = await res.json();
     setResponse(data.text || "No response from AI");

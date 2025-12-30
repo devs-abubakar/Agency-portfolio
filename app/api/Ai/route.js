@@ -1,43 +1,43 @@
-export async function POST(request) {
+import { GoogleGenAI } from "@google/genai";
+
+export async function POST(req) {
   try {
-    console.log("Function called"); 
-    console.log("Raw body:", event.body);
+    // 1. Read JSON body
+    const { prompt } = await req.json();
 
-    const body = JSON.parse(event.body || "{}");
-    const prompt = body.prompt;
-    console.log("Prompt:", prompt);
-
-    if (!prompt) {
-      return {
-        statusCode: 400,
-        body: JSON.stringify({ error: "Prompt missing" }),
-      };
+    if (!prompt || !prompt.trim()) {
+      return new Response(
+        JSON.stringify({ error: "Prompt missing" }),
+        { status: 400 }
+      );
     }
 
+    // 2. Ensure API key exists
+    if (!process.env.GOOGLE_API_KEY) {
+      throw new Error("GOOGLE_API_KEY not found");
+    }
+
+    // 3. Init Gemini
     const ai = new GoogleGenAI({
       apiKey: process.env.GOOGLE_API_KEY,
     });
 
-    console.log("AI client initialized");
-
+    // 4. Generate content
     const result = await ai.models.generateContent({
       model: "gemini-3-flash-preview",
       contents: prompt,
     });
-    
-    console.log("AI response received:", result);
 
-    return {
-      statusCode: 200,
-      body: JSON.stringify({
-        text: result.text || "No text returned",
-      }),
-    };
+    // 5. Return response
+    return new Response(
+      JSON.stringify({ text: result.text || "No response" }),
+      { status: 200 }
+    );
   } catch (err) {
-  console.error("Full error:", err);
-  return {
-    statusCode: 500,
-    body: JSON.stringify({ error: err.message || "Server failed" }),
-  };
-}  
+    console.error("AI ERROR:", err);
+    return new Response(
+      JSON.stringify({ error: err.message || "AI failed" }),
+      { status: 500 }
+    );
+  }
 }
