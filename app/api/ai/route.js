@@ -1,5 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
 
+export const runtime = "nodejs";
+
 export async function POST(request) {
   try {
     const { prompt } = await request.json();
