@@ -17,21 +17,29 @@ const generateStrategy = async () => {
 
   try {
     const res = await fetch("/api/ai", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ prompt }),
-});
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ prompt }),
+    });
 
+    if (!res.ok) {
+      const text = await res.text();
+      console.error("API ERROR:", res.status, text);
+      setResponse(`Server error (${res.status}). Check logs.`);
+      return;
+    }
 
     const data = await res.json();
     setResponse(data.text || "No response from AI");
+
   } catch (err) {
     console.error(err);
-    setResponse("Server error. Try again.");
+    setResponse("Network or server error.");
   } finally {
     setIsLoading(false);
   }
 };
+
 
 
   return (
