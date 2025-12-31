@@ -127,12 +127,12 @@ export default function Navbar() {
         {/* Links with proper padding and no clipping */}
         <nav className="flex-1 flex flex-col justify-center px-8 sm:px-12 space-y-6">
           {navLinks.map((link, i) => (
-            <div key={link.name} className="overflow-hidden">
+            <div key={link.name} className="overflow-hidden flex justify-center">
               <a 
                 ref={el => linksRef.current[i] = el}
                 href={link.href}
                 onClick={(e) => handleLinkClick(e, link.href)}
-                className="block text-4xl sm:text-5xl font-black text-white hover:text-blue-500 transition-all active:scale-95"
+                className="block text-4xl sm:text-5xl font-black border-b-2 hover:border-b-blue-600 border-b-gray-100 text-white hover:text-blue-500 transition-all active:scale-95"
               >
                 {link.name}
               </a>

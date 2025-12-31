@@ -112,12 +112,12 @@ At Aivora Digitals, we help businesses unlock their full potential using AI-powe
           className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"
         >
           <button className="relative group overflow-hidden bg-blue-600 px-10 py-5 rounded-2xl font-bold text-lg transition-all hover:scale-105 active:scale-95 shadow-2xl shadow-blue-500/30">
-            <span className="relative z-10">Launch Your Project</span>
+            <span className="relative z-10"> <a href="#contact">Launch Your Project</a></span>
             <div className="absolute inset-0 bg-blue-400 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
           </button>
 
-          <button className="px-10 py-5 rounded-2xl font-bold text-lg border border-slate-700 hover:border-blue-500 hover:bg-blue-500/5 transition-all">
-            View Case Studies
+          <button className="px-10 py-5 rounded-2xl text-gray-400 font-bold text-lg border border-slate-700 hover:border-blue-500 hover:bg-blue-500/5 transition-all">
+            <a href="#projects">View Case Studies</a>
           </button>
         </div>
 
