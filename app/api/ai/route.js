@@ -15,6 +15,7 @@ export async function OPTIONS() {
 }
 
 export async function POST(request) {
+     console.log("🔥 /api/ai POST hit!"); 
   try {
     const { prompt } = await request.json();
 
