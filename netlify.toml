@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[functions]
+  # This helps bundle the Gemini SDK correctly
+  node_bundler = "esbuild"
+  # Standard Netlify functions have a 10s timeout
+  timeout = 10
