@@ -2,6 +2,18 @@ import { GoogleGenAI } from "@google/genai";
 
 export const runtime = "nodejs";
 
+/* ✅ Handle preflight */
+export async function OPTIONS() {
+  return new Response(null, {
+    status: 200,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type",
+    },
+  });
+}
+
 export async function POST(request) {
   try {
     const { prompt } = await request.json();
@@ -13,15 +25,16 @@ export async function POST(request) {
       );
     }
 
-    const apiKey = process.env.GOOGLE_API_KEY;
-    if (!apiKey) {
+    if (!process.env.GOOGLE_API_KEY) {
       return new Response(
         JSON.stringify({ error: "GOOGLE_API_KEY missing" }),
         { status: 500 }
       );
     }
 
-    const ai = new GoogleGenAI({ apiKey });
+    const ai = new GoogleGenAI({
+      apiKey: process.env.GOOGLE_API_KEY,
+    });
 
     const result = await ai.models.generateContent({
       model: "gemini-3-flash-preview",
@@ -29,12 +42,17 @@ export async function POST(request) {
     });
 
     return new Response(
-      JSON.stringify({ text: result.text || "No response" }),
-      { status: 200 }
+      JSON.stringify({ text: result.text ?? "No response" }),
+      {
+        status: 200,
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+      }
     );
-
-  } catch (error) {
-    console.error("AI API ERROR:", error);
+  } catch (err) {
+    console.error("AI API ERROR:", err);
     return new Response(
       JSON.stringify({ error: "AI failed" }),
       { status: 500 }
