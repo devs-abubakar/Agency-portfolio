@@ -74,7 +74,7 @@ const handleAskAI = async () => {
   setLoading(true);
 
   try {
-    const res = await fetch("/netlify/functions/deep-dive", {
+    const res = await fetch("/api/deep-dive", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
