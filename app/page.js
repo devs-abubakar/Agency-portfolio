@@ -13,7 +13,7 @@ import AIAssistant from "./components/AIAssistant";
 import Cursor from "./components/Customcursor";
 import { InteractiveScrollSection } from "./components/Interactivescroll";
 import Loader from "./components/Loader";
-import Lenis from "@studio-freight/lenis";
+import Lenis from "lenis";
 
 const App = () => {
   const [isScrolled, setIsScrolled] = useState(false);
