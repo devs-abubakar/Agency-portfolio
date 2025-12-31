@@ -6,3 +6,6 @@
     "microphone"
   ]
 }
+  alternates: {
+  canonical: 'https://your-primary-domain.com',
+}

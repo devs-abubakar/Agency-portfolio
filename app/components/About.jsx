@@ -93,6 +93,7 @@ const About = () => {
     <section 
       id="about" 
       ref={sectionRef} 
+      aria-labelledby="about-heading"
       className="py-24 bg-brand-dark overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6">
@@ -122,7 +123,7 @@ const About = () => {
         {/* Team Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
           {team.map((member, idx) => (
-            <div 
+            <article 
               key={idx} 
               ref={el => cardsRef.current[idx] = el}
               className="group relative"
@@ -170,7 +171,7 @@ const About = () => {
                   {member.bio}
                 </p>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

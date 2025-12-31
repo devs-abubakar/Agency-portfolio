@@ -14,6 +14,12 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Aivora Digitals",
   description: "Agency that helps businesses grow with AI-powered solutions.",
+  alternates: {
+    // Replace this with your actual live URL
+    canonical: 'https://aivora-digitals.vercel.app/', 
+  },
+  // This helps with the sitemap you showed earlier
+  metadataBase: new URL('https://aivora-digitals.vercel.app/'),
   icons: {
     icon: "/favicon.png",
     shortcut: "/favicon.png",
