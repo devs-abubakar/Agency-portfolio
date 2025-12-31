@@ -2,7 +2,7 @@
 
       body {
         font-family: 'Manrope', sans-serif;
-        background-color: #ffffff;
+        background-color: #03091f;
         color: #0f172a;
         overflow-x: hidden;
         cursor: none; /* Hide default cursor */
@@ -44,11 +44,11 @@
 }
 
 ::selection {
-  background-color: #ff0099; /* Change to your desired background color (e.g., a hex code or color name) */
+  background-color: black; /* Change to your desired background color (e.g., a hex code or color name) */
   color: #ffffff;            /* Change to your desired text color */
 }
 input,textarea{
-  color: #ff0099;
+  color: whitesmoke;
 }
 
 /* 1. Define the width of the scrollbar */

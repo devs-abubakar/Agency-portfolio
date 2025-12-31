@@ -56,6 +56,8 @@ const Hero = () => {
   }, []);
 
   return (
+    <section aria-labelledby="hero-title">
+
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 bg-brand-dark z-10">
       {/* Background blobs */}
       <div className="absolute inset-0">
@@ -64,7 +66,6 @@ const Hero = () => {
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10" />
       </div>
 
-      {/* 3D AI Orb */}
 {/* 3D AI Orb */}
 <div className="absolute inset-0 opacity-40 z-0 pointer-events-auto">
   <AiOrb />
@@ -142,6 +143,7 @@ At Aivora Digitals, we help businesses unlock their full potential using AI-powe
         </div>
       </div>
     </div>
+    </section>
   );
 };
 

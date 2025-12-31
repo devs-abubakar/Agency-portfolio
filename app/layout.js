@@ -23,7 +23,7 @@ export const metadata = {
   openGraph: {
     title: "Aivora Digitals",
     description: "Agency that helps businesses grow with AI-powered solutions.",
-    url: "https://aivora-digitals.netlify.app",
+    url: "https://aivora-digitals.vercel.app/",
     siteName: "Aivora Digitals",
     images: [
       {
@@ -55,8 +55,8 @@ export default function RootLayout({ children }) {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Aivora Digitals",
-        "url": "https://aivora-digitals.netlify.app",
-        "logo": "https://aivora-digitals.netlify.app/images/logo.jpeg",
+        "url": "https://aivora-digitals.vercel.app/",
+        "logo": "https://aivora-digitals.vercel.app/images/logo.jpeg",
         "sameAs": [
           "https://www.linkedin.com/company/aivora-digitals",
           "https://www.facebook.com/aivora-digitals",
@@ -65,6 +65,7 @@ export default function RootLayout({ children }) {
       }),
     }}
   />
+  <meta name="google-site-verification" content="BUTXNsOi8kn9JXAG7qp6iSxbUSUhog_rgAZSjIQRMsg" />
 </head>
 
       <body

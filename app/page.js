@@ -99,7 +99,9 @@ const App = () => {
           </main>
 
           <Footer />
-          <AIAssistant />
+          <aside>
+            <AIAssistant />
+          </aside>
           <Cursor />
         </div>
       )}

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aivora-digitals.netlify.app/sitemap.xml
+Sitemap: https://aivora-digitals.vercel.app/sitemap.xml
