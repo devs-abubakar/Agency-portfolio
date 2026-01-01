@@ -59,21 +59,40 @@ const Contact = () => {
   };
 
   // Handle form submission
+// Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setSubmitSuccess(true);
-    setFormData({ name: '', email: '', service: 'Web Development', message: '' });
-    
-    // Reset success message after 5 seconds
-    setTimeout(() => setSubmitSuccess(false), 5000);
-  };
+    setSubmitSuccess(false); // Reset success state if they try again
 
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitSuccess(true);
+        setFormData({ name: '', email: '', service: 'Web Development', message: '' });
+        
+        // Reset success message after 5 seconds
+        setTimeout(() => setSubmitSuccess(false), 5000);
+      } else {
+        // Handle server-side errors (e.g., 400 or 500)
+        const errorData = await response.json();
+        alert(errorData.message || 'Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      // Handle network errors
+      console.error('Submission error:', error);
+      alert('Network error. Please check your connection.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   // Handle input change
   const handleInputChange = (e) => {
     const { name, value } = e.target;
