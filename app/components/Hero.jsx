@@ -8,7 +8,7 @@ const Hero = () => {
   const badgeRef = useRef(null);
   const titleRef = useRef(null);
   const descRef = useRef(null);
-  const btnRef = useRef(null);
+  // const btnRef = useRef(null);
 
   useLayoutEffect(() => {
     if (window.innerWidth < 768) return;
@@ -40,16 +40,16 @@ const Hero = () => {
           },
           '-=0.4'
         )
-        .from(
-          btnRef.current.children,
-          {
-            y: 20,
-            opacity: 0,
-            stagger: 0.15,
-            duration: 0.6,
-          },
-          '-=0.4'
-        );
+        // .from(
+        //   btnRef.current.children,
+        //   {
+        //     y: 20,
+        //     opacity: 0,
+        //     stagger: 0.15,
+        //     duration: 0.6,
+        //   },
+        //   '-=0.4'
+        // );
     });
 
     return () => ctx.revert();
@@ -107,7 +107,7 @@ At Aivora Digitals, we help businesses unlock their full potential using AI-powe
           
         </p>
 
-        {/* Buttons */}
+        {/* Buttons
         <div
           ref={btnRef}
           className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"
@@ -120,7 +120,7 @@ At Aivora Digitals, we help businesses unlock their full potential using AI-powe
           <button className="px-10 py-5 rounded-2xl text-gray-400 font-bold text-lg border border-slate-700 hover:border-blue-500 hover:bg-blue-500/5 transition-all">
             <a href="#projects">View Case Studies</a>
           </button>
-        </div>
+        </div> */}
 
         {/* Badges */}
         <div className="mt-20 grid grid-cols-2 text-gray-400 md:grid-cols-4 gap-4 md:gap-8 opacity-60">
